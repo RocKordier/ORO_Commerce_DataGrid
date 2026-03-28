@@ -11,7 +11,14 @@
     ],
     "require": {
         "php": "~8.4.0",
-        "oro/commerce-enterprise": "6.1.*"
+        "oro/platform": "6.1.*"
+    },
+    "require-dev": {
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-doctrine": "^2.0",
+        "phpstan/phpstan-symfony": "^2.0",
+        "phpstan/phpstan-webmozart-assert": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -21,6 +28,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "symfony/runtime": true,
+            "symfony/flex": true,
+            "phpstan/extension-installer": true
         }
     }
 }
